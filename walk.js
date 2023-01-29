@@ -7,7 +7,8 @@ document.querySelector('#walk-btn').addEventListener('click', () => {
 	const startWalk = () => {
 		document.querySelector('#alarm1').play();
 	  walkStart = new Date();
-	  alert("It's time to walk, Gbemiga!");
+	  alert("It's time to walk, Gbemiga! Click OK to start");
+	  status.textContent = "Active"
 	  walkEnd = new Date(walkStart.getTime() + 5 * 60000);
 	  walkIntervalId = setInterval(walkFunc, 5 * 60000);
 	}
@@ -17,7 +18,7 @@ document.querySelector('#walk-btn').addEventListener('click', () => {
 	  let now = new Date();
 	  if (now >= walkEnd) {
 		clearInterval(walkIntervalId);
-		alert("Stop exercising!");
+		alert("Stop exercising! Click OK to stop");
 		setTimeout(startWalk, 50 * 60000 - 5 * 60000);
 	  }
 	}
