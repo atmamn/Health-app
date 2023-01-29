@@ -18,7 +18,7 @@ document.querySelector('#start').addEventListener('click', () => {
 			location.reload();
 		}
     }
-    let intervalId = setInterval(myFunc, 1000);
+    let intervalId = setInterval(myFunc, 60000);
 });
 
 
